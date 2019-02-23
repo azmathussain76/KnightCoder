@@ -1,0 +1,5 @@
+detailed questions about memory, stack, etc.
+
+1) What happen to stack after a function is called.
+2) delete a node in list.
+3) What's z buffer

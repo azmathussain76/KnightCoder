@@ -1,0 +1,3 @@
+Four people, (A, B, C, and D) need to get across a river, and there is only one boat. 
+The boat can only hold two people at a time and will only go as fast as the slowest person in the boat. 
+If it takes A one minute to cross, B two minutes, C five minutes, and D seven minutes, what is the shortest time for all 4 people to cross the river?  

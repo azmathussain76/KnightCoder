@@ -1,0 +1,5 @@
+CPU VS GPU – What is the Difference & How do you Avoid Bottlenecking
+By Johannes Amstrup Andersen -May 15, 2018
+
+from: https://www.progamerreview.com/cpu-vs-gpu/
+

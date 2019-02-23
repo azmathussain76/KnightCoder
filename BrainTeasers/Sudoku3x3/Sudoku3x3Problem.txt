@@ -1,0 +1,23 @@
+Put 1-9 into 3x3 matrix, and have the same sum in every rows and columns and two diagonal.
+
+Solution: as I've solved it on 20180916
+Row-wise:
+2 7 6
+9 5 1
+4 3 8
+
+Can iterate through the list of 1-9 to find the matching pairs,
+with two iteration variables, i and j, starting on opposite ends
+of the array.
+
+compute each pair until reaching the middle, which is by itself--5
+
+Therefore 5 must be part of every combination, with the total of each
+row, column and diagonal equal to 15
+
+We can lay out the values in 5 steps
+1. Put 5 in the middle
+2. Put the most-skewed (using differencing) pair first
+3. Place the next most-skewed pair so it doesn't overlap the first--go to a diagonal
+4. Can now place the rest using the differences found from the rows and
+colums with only 1 element unfilled

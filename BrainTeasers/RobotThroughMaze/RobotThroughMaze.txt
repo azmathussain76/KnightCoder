@@ -1,0 +1,8 @@
+algorithm to find route to a ball for a robot in a maze.
+
+Can do this recursively, by examining every path, traversing it recursively until you either find a wall, or the ball.
+
+The recursion tree gets very deep for this, but at least the robot can find the ball first before making the first move and
+without using any kind of backtracking.
+
+The return value will be a list of directions (steps and turns) for the robot to use to find the ball.

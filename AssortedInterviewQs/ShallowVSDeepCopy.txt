@@ -1,0 +1,19 @@
+Q. What is the difference between a shallow copy and deep copy?
+
+A. Shallow copies duplicate as little as possible. A shallow copy of a collection is a copy of the collection structure, not the elements. With a shallow copy, two collections now share the individual elements.
+
+Deep copies duplicate everything. A deep copy of a collection is two collections with all of the elements in the original collection duplicated.
+
+A shallow copy can usually be implemented with some kind of enumeration of the elements to be copied, followed by the iterative copy of the structure one level down.
+A deep copy can be done iteratively or most likely recursively.
+{Imagine two objects: A and B of same type _t(with respect to C++) and you are thinking about shallow/deep copying A to B}
+
+Shallow Copy: Simply makes a copy of the reference to A into B. Think about it as a copy of A's Address. So, the addresses of A and B will be the same i.e. they will be pointing to the same memory location i.e. data contents.
+
+Deep copy: Simply makes a copy of all the members of A, allocates memory in a different location for B and then assigns the copied members to B to achieve deep copy. In this way, if A becomes non-existant B is still valid in the memory. The correct term to use would be cloning, where you know that they both are totally the same, but yet different (i.e. stored as two different entities in the memory space). You can also provide your clone wrapper where you can decide via inclusion/exclusion list which properties to select during deep copy. This is quite a common practice when you create APIs.
+
+You can choose to do a Shallow Copy ONLY_IF you understand the stakes involved. When you have enormous number of pointers to deal with in C++ or C, doing a shallow copy of an object is REALLY a bad idea.
+
+EXAMPLE_OF_DEEP COPY_ An example is, when you are trying to do image processing and object recognition you need to mask "Irrelevant and Repetitive Motion" out of your processing areas. If you are using image pointers, then you might have the specification to save those mask images. NOW... if you do a shallow copy of the image, when the pointer references are KILLED from the stack, you lost the reference and its copy i.e. there will be a runtime error of access violation at some point. In this case, what you need is a deep copy of your image by CLONING it. In this way you can retrieve the masks in case you need them in the future.
+
+EXAMPLE_OF_SHALLOW_COPY I am not extremely knowledgeable compared to the users in StackOverflow so feel free to delete this part and put a good example if you can clarify. But I really think it is not a good idea to do shallow copy if you know that your program is gonna run for an infinite period of time i.e. continuous "push-pop" operation over the stack with function calls. If you are demonstrating something to an amateur or novice person (e.g. C/C++ tutorial stuff) then it is probably okay. But if you are running an application such as surveillance and detection system, or Sonar Tracking System, you are not supposed to keep shallow copying your objects around because it will kill your program sooner or later.

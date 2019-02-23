@@ -1,0 +1,60 @@
+C/C++ Questions and Debugging
+
+what does the volatile keyword mean?
+
+Another program or some hardware may update the data pointed to by this variable. Ensures what is being read out of a variable isn't based on compiler's optimization
+or an old copy of the variable the program had.
+Ensures that the variable is fetched from memory on every access.
+
+what does the static keyword mean?
+
+Variable preserves its value even if it's out of scope. Can make some functions non-reentrant.
+
+
+Other questions: What is volatile keyword? When is it used?
+what is static variable in c++. what is mutex and virtual memory
+
+what is the difference between debug and release mode in VS, 
+
+What are some examples of container classes in the Standard Template Library
+Vector, List, Hash Map, HashSet, etc.
+
+Containers store objectsin an organized fashion and follow specific acess rules. They have 3 properties:
+access--way of accessing objects in the container
+storage--way of storing objects back to container
+traversal--way of traversing objects in the container
+
+Container classes are expected to implemnt the following:
+create an empty container (Constructor)
+insert objects into the container
+delete objects from the container
+deleted all objects from the container (clear)
+access the objects in the container
+access the number of objects in the container (count)
+
+Containers are sometimes implemented in conjunction with iterators.
+
+3. A question on merge sort. It was a little complicated involving two processor communication. 
+One processor had a sorted list and the other also had a sorted list. 
+Write a program to merge the list in a memory accessible to both the processors. 
+(I know I am not clear on the explanation of the question, basically you will have to know how merge sort works )
+
+5. Given that in a switch statement, there are very large number of cases(say 10000). 
+How best can you improve the O(n)? What data structure can you implement and how. FYI, 
+each case statement can be a function. (Switch case statement is also branching ...)
+
+Cycle in Linked List 
+
+Take two pointers, one fast and one slow
+
+Question on producer/consumer theory and asked to analyze a specific model case. 
+
+os, multi threading ,c questions
+
+1) How do you deal with the inaccuracy of floating point comparisons.
+2) Distinguish pointers and references in C++
+3) Algorithm to find the intersection between two polygons  
+
+Debugging related questions. E.g. how would you use a debugger to find location of bug?
+
+Design a queue using pointers

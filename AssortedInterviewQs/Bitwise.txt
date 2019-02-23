@@ -1,0 +1,30 @@
+Programming questions: bitwise operations. 
+
+2. Reverse all the bits in 32bit int. <== *
+Given a 32 bit unsigned integer, write a function (in C) that returns a count of how many bits are "1".  
+leetcode question: number of 1 bits. To optimize, you need something like n = n & (n-1)
+
+stanford bit twiddling hacks
+
+Write a function to convert big endian to little endian
+uint32_t endian_convert(uint32_t bvalue)
+{
+  uint32_t lval;
+  lval = ((bvalue >> 24) & 0xff) |
+                    ((bvalue > 8) & 0xff00) |
+                    ((bvalue << 24) & 0xff000000);
+  return lval;
+}
+
+0,1,2,3
+to
+3,2,1,0
+
+uint32_t endian_convert(uint32_t bvalue) {
+    uint32_t result;
+    result = bvalue & 0xFF << 24;
+    result |= bvalue & 0xFF00 << 8;
+    result |= bvalue & 0xFF0000 >> 8;
+    result |= bvalue & 0xFF000000 >> 24;
+    return result;
+}

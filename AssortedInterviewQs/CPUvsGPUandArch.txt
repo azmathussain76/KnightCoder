@@ -1,0 +1,51 @@
+detailed questions about CPU/GPU architecture. 
+
+Also, questions involving Amdahl's Law
+
+Difference between ARM and Intel CPU on high level architecture
+- Describe I2S, I2C
+
+ARM uses RISC and x86 uses CISC, so assembly instruction sets are very different.
+- Describe hardware signals and operations
+
+if you could do one thing to improve a GPU, what would it be?
+
+Solve how to serialize and record a multithreaded graphics command pipelines to the GPU so that it can be replayed. 
+
+4. Why is branching a bad thing for a processor? How does it slow the process down.
+
+6. Implement a 3x3 averaging filter(not considering the center pixel) given an image,width and height. What is the minimum memory needed to perform this action.
+
+Given a random instruction and asked for in-depth explanation of the stages of execution
+
+a lot of details about Linux device driver programming including some specific interfaces  
+
+Show a data structure for LRU cache
+
+How about using a decrementing counter per cycle per block?
+In every cycle, increment the counter (to its saturation) if the same is being looked for. 
+Else, decrement it. Evict the block if counter =0.
+
+Cache coherence algorithms between I/O and CPU  
+
+Interviewer described a complex race condition involving OS code and GPU work submission. 
+Asked me to fix it using a register and no extra buffer.  
+
+Solve how to serialize and record a multithreaded graphics command pipelines to the GPU so that it can be replayed.
+
+what are the types of cache misses? and how can we improve  each type of miss?
+
+cold, conflict, capacity
+
+compulsory/cold miss - prefetching
+conflict - increasing associativity and/or improving replacement policy
+capacity - increasing the capacity of the cache
+coherence - reducing the block size(false sharing)
+
+Architecture related questions: Cache, MMU etc  
+
+How to deal with the problem that you frequently access the memory's two pages, suppose there is no cache. 
+
+cache scheme, cache protocol, ways to choose thread, ECC
+
+I was asked to design the instruction fetching stage of a processor simulator. 

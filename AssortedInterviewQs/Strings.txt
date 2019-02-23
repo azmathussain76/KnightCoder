@@ -1,0 +1,33 @@
+Implement string functions in assembly
+implemnent strlen, strcat, strcpy
+What about memcpy?
+Implement malloc, calloc, and free in either c or assembly
+
+explain an algorithm to show if a given set of strings is a subset of another set of strings. What is its O(n)? 
+ 
+
+
+Write a malloc and free function that forces the buffer to start on a byte aligned boundary. (Asked as a homework assignment, not during an interview)
+
+Q1. How do you reverse a string, using no additional memory and keeping the algorithm to O(n)?
+A1. This is similar to LC344. Take two pointers, one at each end of the array, and swap the characters pointed to by each.
+Iterate the left pointer in a positive direction, and the right pointer in a negative direction.  As soon as they are equal to
+each other (in the case of an odd-sized word) or cross each other (even-sized word), the word or string has been completely
+reversed by that point.
+Ex: Input  : "I just finished my lunch"
+    Output : "hcnul ym dehsinif tsuj I"
+
+Q2. How do you reverse the word order in a string, using no additional memory and keeping the algorithm to O(n)?
+A2. This is a variation on Q1, however this time the words are reversed in the string. The way to do this would be to reverse
+the letters in each word. Can either tokenize the string (strtok) and store into an array of strings, then iterate the outer array,
+reversing each word, and then joining them at the end (strcat).  In C, however, that might be a little heavyweight, so instead
+you can keep a space array to keep track of the indicies of spaces. Then do an i>j comparison of each word, swapping chars as you
+go to reverse each word.
+Ex: Input  : "I just finished my lunch"
+    Trans  : "hcnul ym dehsinif tsuj I"
+    Output : "lunch my finished just I"
+
+Q3. How do you reverse the letters in the words of a string, using no additional memory and keeping the algorithm to O(n)?
+A3. Another variation on reversing from Q1 and Q2.  This time we want to 
+Ex: Input  : "I just finished my lunch"
+    Output : "I tsuj dehsinif ym hcnul"
